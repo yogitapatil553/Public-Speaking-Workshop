@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#e11d48" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sareeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="50%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="podiumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="700" fill="url(#bgGrad)"/>
+  <rect width="600" height="700" fill="url(#spotlight)"/>
+
+  <!-- Stage Lights & Bokeh Circles -->
+  <circle cx="120" cy="120" r="45" fill="#f59e0b" opacity="0.15"/>
+  <circle cx="480" cy="180" r="60" fill="#e11d48" opacity="0.12"/>
+  <circle cx="520" cy="80" r="30" fill="#fef08a" opacity="0.2"/>
+
+  <!-- Speaker Figure Silhouette & Styling (Yogita Patil) -->
+  <!-- Hair & Head -->
+  <circle cx="300" cy="240" r="75" fill="#18181b"/>
+  <!-- Hair bun -->
+  <circle cx="360" cy="225" r="32" fill="#18181b"/>
+
+  <!-- Face & Neck -->
+  <path d="M 270 230 Q 300 315 330 230 Z" fill="#fbd5b5"/>
+  <rect x="288" y="295" width="24" height="45" fill="#eac19d" rx="4"/>
+
+  <!-- Bindi & Expression -->
+  <circle cx="300" cy="235" r="4" fill="#b91c1c"/>
+  <path d="M 288 275 Q 300 288 312 275" stroke="#991b1b" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Elegant Professional Indian Attire / Saree -->
+  <path d="M 220 340 L 380 340 L 440 600 L 160 600 Z" fill="url(#sareeGrad)"/>
+  
+  <!-- Golden Zari Border (Traditional Saree Pallu) -->
+  <path d="M 240 340 Q 310 440 260 600" stroke="url(#goldBorder)" stroke-width="18" fill="none"/>
+  <path d="M 240 340 Q 310 440 260 600" stroke="#b45309" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+
+  <!-- Raised Confident Hand Delivering Speech -->
+  <path d="M 370 380 Q 420 340 450 310" stroke="#fbd5b5" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <circle cx="455" cy="305" r="14" fill="#fbd5b5"/>
+
+  <!-- Stage Lectern / Podium -->
+  <polygon points="170,480 430,480 450,700 150,700" fill="url(#podiumGrad)"/>
+  <rect x="150" y="465" width="300" height="20" rx="4" fill="#475569" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Podium Emblem & Tagline -->
+  <circle cx="300" cy="550" r="42" fill="#0f172a" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="300" y="546" font-family="'Mukta', sans-serif" font-size="16" font-weight="bold" fill="#fef08a" text-anchor="middle">बोला</text>
+  <text x="300" y="566" font-family="'Mukta', sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">बिनधास्त!</text>
+
+  <!-- Gooseneck Microphones on Podium -->
+  <path d="M 240 465 Q 260 380 280 350" stroke="#94a3b8" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="272" y="335" width="16" height="24" rx="5" fill="#f59e0b"/>
+  <circle cx="280" cy="347" r="4" fill="#ffffff" opacity="0.8"/>
+
+  <path d="M 360 465 Q 340 390 320 360" stroke="#64748b" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <rect x="312" y="348" width="14" height="20" rx="4" fill="#334155"/>
+
+  <!-- Audio Wave Radiance / Energy -->
+  <path d="M 450 270 A 40 40 0 0 1 480 330" stroke="#fef08a" stroke-width="3" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <path d="M 465 250 A 60 60 0 0 1 505 345" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 480 230 A 80 80 0 0 1 530 360" stroke="#ea580c" stroke-width="2.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+</svg>

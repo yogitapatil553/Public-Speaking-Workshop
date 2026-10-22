@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#g2)"/>
+  <!-- Grand Auditorium Stage Curtains -->
+  <path d="M 0 0 L 120 0 L 80 450 L 0 450 Z" fill="#881337"/>
+  <path d="M 600 0 L 480 0 L 520 450 L 600 450 Z" fill="#881337"/>
+  <path d="M 0 0 L 600 0 L 600 60 Q 300 100 0 60 Z" fill="#9f1239"/>
+  <!-- Stage Lights Spot -->
+  <ellipse cx="300" cy="380" rx="180" ry="40" fill="#f59e0b" opacity="0.3"/>
+  <!-- Confident Student Speaking -->
+  <circle cx="300" cy="180" r="32" fill="#fbd5b5"/>
+  <path d="M 265 220 L 335 220 L 350 370 L 250 370 Z" fill="#1e3a8a"/>
+  <!-- Mike -->
+  <line x1="300" y1="215" x2="300" y2="280" stroke="#cbd5e1" stroke-width="4"/>
+  <circle cx="300" cy="210" r="8" fill="#f59e0b"/>
+  <!-- Applauding Audience Silhouette -->
+  <path d="M 80 450 Q 150 400 200 450" fill="#09090b"/>
+  <path d="M 400 450 Q 450 400 520 450" fill="#09090b"/>
+  <!-- Tag -->
+  <rect x="20" y="80" width="140" height="28" rx="6" fill="#e11d48"/>
+  <text x="90" y="98" font-family="'Mukta', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">कोल्हापूर भव्य मंच</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "name": "yogita-patil-bhashankala-website",
+  "version": "1.0.0",
+  "description": "Official Website & Admin CMS for Yogita Patil Bhashankala Karyashala - 'बोला बिनधास्त!'",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "public-speaking",
+    "marathi-bhashankala",
+    "yogita-patil",
+    "workshop",
+    "admin-cms",
+    "hybrid-workshop",
+    "leads-crm"
+  ],
+  "author": "Yogita Patil Team",
+  "license": "MIT"
+}

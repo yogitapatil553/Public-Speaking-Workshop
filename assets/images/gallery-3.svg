@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <rect width="600" height="450" fill="#0f172a"/>
+  <!-- Zoom Grid 6 boxes -->
+  <g stroke="#334155" stroke-width="4">
+    <!-- Box 1 Instructor Yogita Patil -->
+    <rect x="25" y="25" width="265" height="185" rx="8" fill="#1e293b"/>
+    <circle cx="157" cy="100" r="35" fill="#fbd5b5"/>
+    <path d="M 120 145 Q 157 180 195 145 Z" fill="#b91c1c"/>
+    <rect x="35" y="175" width="110" height="25" rx="4" fill="#0f172a" stroke="none"/>
+    <text x="45" y="192" font-family="'Mukta', sans-serif" font-size="12" fill="#f59e0b" font-weight="bold">योगिता पाटील (होस्ट)</text>
+
+    <!-- Box 2 Student 1 -->
+    <rect x="310" y="25" width="265" height="185" rx="8" fill="#1e293b"/>
+    <circle cx="442" cy="100" r="30" fill="#fed7aa"/>
+    <rect x="320" y="175" width="90" height="25" rx="4" fill="#0f172a" stroke="none"/>
+    <text x="330" y="192" font-family="'Mukta', sans-serif" font-size="12" fill="#94a3b8">अमित (पुणे)</text>
+
+    <!-- Box 3 Student 2 -->
+    <rect x="25" y="235" width="265" height="185" rx="8" fill="#1e293b"/>
+    <circle cx="157" cy="310" r="30" fill="#fbd5b5"/>
+    <rect x="35" y="385" width="90" height="25" rx="4" fill="#0f172a" stroke="none"/>
+    <text x="45" y="402" font-family="'Mukta', sans-serif" font-size="12" fill="#94a3b8">सुवर्णा (मुंबई)</text>
+
+    <!-- Box 4 Student 3 Speaking -->
+    <rect x="310" y="235" width="265" height="185" rx="8" fill="#1e293b" stroke="#22c55e" stroke-width="3"/>
+    <circle cx="442" cy="310" r="30" fill="#fed7aa"/>
+    <rect x="320" y="385" width="130" height="25" rx="4" fill="#0f172a" stroke="none"/>
+    <text x="330" y="402" font-family="'Mukta', sans-serif" font-size="12" fill="#22c55e" font-weight="bold">🎙️ प्रथमेश (लाइव्ह सराव)</text>
+  </g>
+</svg>

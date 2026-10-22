@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Production & Build outputs
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Environment and Local Configs
+.env
+.env.local
+.env.*.local
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE & Editor Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backup and Temporary Files
+*.backup.html
+*.bak
+*.tmp
+*.temp
+*~

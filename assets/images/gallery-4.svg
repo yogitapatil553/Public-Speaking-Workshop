@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <rect width="600" height="450" fill="#1e1b4b"/>
+  <!-- Speech Practice Studio Mirror & Feedback -->
+  <rect x="50" y="40" width="500" height="370" rx="12" fill="#0f172a" stroke="#6366f1" stroke-width="2"/>
+  <!-- Waveform of Voice Modulation -->
+  <path d="M 70 225 Q 120 120 170 225 T 270 225 T 370 225 T 470 225 T 530 225" stroke="#f59e0b" stroke-width="4" fill="none"/>
+  <path d="M 70 225 Q 120 160 170 225 T 270 225 T 370 225 T 470 225 T 530 225" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.6"/>
+  <!-- Podium Silhouette -->
+  <rect x="250" y="270" width="100" height="140" fill="#334155" rx="6"/>
+  <circle cx="300" cy="180" r="40" fill="#fbd5b5"/>
+  <path d="M 285 230 L 315 230 L 325 270 L 275 270 Z" fill="#e11d48"/>
+  <rect x="180" y="60" width="240" height="40" rx="6" fill="#312e81"/>
+  <text x="300" y="86" font-family="'Mukta', sans-serif" font-size="16" font-weight="bold" fill="#fef08a" text-anchor="middle">आवाज व देहबोली विश्लेषण</text>
+</svg>
