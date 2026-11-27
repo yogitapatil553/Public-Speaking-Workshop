@@ -28,13 +28,16 @@ function initHeroBackgroundVideo() {
   video.setAttribute('muted', '');
   video.setAttribute('playsinline', '');
 
+  let isUserPaused = false;
+
   const startPlayback = () => {
+    if (isUserPaused) return;
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(() => {
         // Retry autoplay on first user interaction if blocked by browser policy
         const resumeOnInteraction = () => {
-          video.play().catch(() => {});
+          if (!isUserPaused) video.play().catch(() => {});
           document.removeEventListener('click', resumeOnInteraction);
           document.removeEventListener('touchstart', resumeOnInteraction);
         };
@@ -43,6 +46,29 @@ function initHeroBackgroundVideo() {
       });
     }
   };
+
+  // Switch between desktop and portrait mobile hero video
+  const desktopSrc = video.getAttribute('data-desktop-src');
+  const mobileSrc = video.getAttribute('data-mobile-src');
+  const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+  const applyResponsiveVideoSource = () => {
+    if (!desktopSrc || !mobileSrc) return;
+    const targetSrc = mobileQuery.matches ? mobileSrc : desktopSrc;
+    const currentAttr = video.getAttribute('src');
+    if (currentAttr !== targetSrc) {
+      video.setAttribute('src', targetSrc);
+      video.load();
+      startPlayback();
+    }
+  };
+
+  applyResponsiveVideoSource();
+  if (typeof mobileQuery.addEventListener === 'function') {
+    mobileQuery.addEventListener('change', applyResponsiveVideoSource);
+  } else if (typeof mobileQuery.addListener === 'function') {
+    mobileQuery.addListener(applyResponsiveVideoSource);
+  }
 
   startPlayback();
 
@@ -54,12 +80,14 @@ function initHeroBackgroundVideo() {
     toggleBtn.addEventListener('click', (e) => {
       e.preventDefault();
       if (video.paused) {
+        isUserPaused = false;
         video.play().then(() => {
           if (iconSpan) iconSpan.textContent = '⏸';
           if (labelSpan) labelSpan.textContent = 'Pause Animation';
           toggleBtn.setAttribute('title', 'Pause background animation');
         }).catch(() => {});
       } else {
+        isUserPaused = true;
         video.pause();
         if (iconSpan) iconSpan.textContent = '▶';
         if (labelSpan) labelSpan.textContent = 'Play Animation';
@@ -73,7 +101,7 @@ function initHeroBackgroundVideo() {
     if (document.hidden) {
       if (!video.paused) video.pause();
     } else {
-      if (video.paused && (!toggleBtn || toggleBtn.querySelector('.video-toggle-icon')?.textContent === '⏸')) {
+      if (video.paused && !isUserPaused) {
         video.play().catch(() => {});
       }
     }

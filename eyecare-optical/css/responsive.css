@@ -111,6 +111,19 @@
     padding: 56px 0 64px 0;
   }
 
+  .hero-video-bg {
+    filter: brightness(0.9) contrast(1.1);
+  }
+
+  .hero-video-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(7, 25, 47, 0.68) 0%,
+      rgba(11, 37, 69, 0.56) 50%,
+      rgba(7, 25, 47, 0.78) 100%
+    );
+  }
+
   .hero-card-main img {
     height: 280px;
   }
