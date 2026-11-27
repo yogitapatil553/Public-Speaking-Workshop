@@ -413,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 320px;
+  width: min(320px, 88vw);
   height: 100vh;
   background: #ffffff;
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
@@ -983,6 +983,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 14px;
   border-top: 1px solid var(--border);
   gap: 10px;
@@ -1198,6 +1199,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
   background: var(--bg-alt);
   padding: 10px 16px;
   border-radius: var(--radius-sm);
@@ -1759,4 +1762,45 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* ==========================================================================
+   Reusable Responsive Layout Grids
+   ========================================================================== */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.split-grid-wide {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.split-grid-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.gallery-3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.auto-grid-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 28px;
+}
+
+.auto-grid-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 30px;
 }

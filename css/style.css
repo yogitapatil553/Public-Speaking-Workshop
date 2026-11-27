@@ -775,7 +775,7 @@ button, input, select, textarea {
 
 .batches-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(1.25rem, 3vw, 1.75rem);
 }
 
@@ -1010,7 +1010,7 @@ button, input, select, textarea {
 
 .learn-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(1.25rem, 3vw, 1.75rem);
 }
 
@@ -1091,7 +1091,7 @@ button, input, select, textarea {
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: clamp(1.25rem, 3vw, 2rem);
 }
 
@@ -1193,7 +1193,7 @@ button, input, select, textarea {
 
 .success-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: clamp(1.25rem, 3vw, 2rem);
 }
 
@@ -1320,7 +1320,7 @@ button, input, select, textarea {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: clamp(1rem, 2.5vw, 1.5rem);
 }
 
@@ -1422,7 +1422,7 @@ button, input, select, textarea {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: clamp(1.25rem, 3vw, 2rem);
   margin-bottom: 3rem;
 }
@@ -2615,7 +2615,7 @@ button, input, select, textarea {
 
 .admin-items-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }

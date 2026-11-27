@@ -115,8 +115,32 @@
       .admin-layout {
         grid-template-columns: 1fr;
       }
+      .admin-sidebar {
+        padding: 18px 14px;
+      }
+      .admin-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .admin-nav-item {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+      .admin-main {
+        padding: 18px 14px;
+      }
       .stat-counter-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .stat-counter-grid {
+        grid-template-columns: 1fr;
+      }
+      .admin-card {
+        padding: 16px;
       }
     }
   </style>
@@ -372,7 +396,7 @@
 
           <div class="admin-card">
             <form id="shopSettingsForm">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="split-grid-compact">
                 <div class="form-group">
                   <label class="form-label">Shop Name</label>
                   <input type="text" id="setShopName" class="form-control" required />
@@ -383,7 +407,7 @@
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="split-grid-compact">
                 <div class="form-group">
                   <label class="form-label">Display Phone Number</label>
                   <input type="text" id="setShopPhone" class="form-control" placeholder="+91 98765 43210" required />
@@ -394,7 +418,7 @@
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="split-grid-compact">
                 <div class="form-group">
                   <label class="form-label">WhatsApp Display Number</label>
                   <input type="text" id="setShopWhatsApp" class="form-control" placeholder="+91 98765 43210" required />
@@ -457,7 +481,7 @@
           <input type="text" id="prodName" class="form-control" required />
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div class="split-grid-compact" style="gap: 14px;">
           <div class="form-group">
             <label class="form-label">Category *</label>
             <select id="prodCategory" class="form-control">
@@ -477,7 +501,7 @@
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div class="split-grid-compact" style="gap: 14px;">
           <div class="form-group">
             <label class="form-label">Frame Shape</label>
             <input type="text" id="prodShape" class="form-control" placeholder="e.g. Round, Square, Aviator" />
@@ -488,7 +512,7 @@
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div class="split-grid-compact" style="gap: 14px;">
           <div class="form-group">
             <label class="form-label">Available Colors (comma-separated)</label>
             <input type="text" id="prodColors" class="form-control" placeholder="e.g. Matte Black, Gold, Tortoise" />

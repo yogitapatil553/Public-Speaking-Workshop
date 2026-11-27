@@ -252,9 +252,9 @@ function openProductModal(productId) {
   modalOverlay.innerHTML = `
     <div class="modal-box" style="padding: 30px;">
       <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 28px;">
         <div>
-          <div style="height: 320px; border-radius: var(--radius-md); overflow: hidden; background: #f8fafc; border: 1px solid var(--border);">
+          <div style="height: clamp(200px, 45vw, 320px); border-radius: var(--radius-md); overflow: hidden; background: #f8fafc; border: 1px solid var(--border);">
             <img src="${product.image}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;" />
           </div>
           <div style="margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap;">
@@ -296,10 +296,10 @@ function openProductModal(productId) {
           ` : ''}
 
           <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
-            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="flex:1;">
+            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="flex:1 1 180px;">
               <span>💬 Enquire on WhatsApp</span>
             </a>
-            <a href="tel:${shop.phoneRaw}" class="btn btn-outline" style="flex:1;">
+            <a href="tel:${shop.phoneRaw}" class="btn btn-outline" style="flex:1 1 160px;">
               <span>📞 Call Store</span>
             </a>
           </div>
