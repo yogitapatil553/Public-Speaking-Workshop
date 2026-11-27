@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Optical Products Catalog | Eye Care Optical Shop</title>
+  <meta name="description" content="Browse our complete collection of spectacle frames, polarized sunglasses, blue cut computer glasses, contact lenses, and Zeiss/Essilor prescription lenses.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .filter-bar {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+    .search-box {
+      position: relative;
+      flex-grow: 1;
+      max-width: 380px;
+      min-width: 240px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      background: var(--bg-alt);
+    }
+    .search-box input:focus {
+      background: #ffffff;
+      border-color: var(--accent);
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .filter-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-select {
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+    .category-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .pill-btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-bar-item">📍 <span data-shop-address>Shop No. 12, Vision Arcade, MG Road, Pune</span></span>
+        <span class="top-bar-item hide-tablet">🕒 <span data-shop-hours>Mon - Sat: 10AM - 9PM</span></span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+919876543210" data-call-link class="top-bar-item">📞 <span data-shop-phone>+91 98765 43210</span></a>
+        <a href="#" data-whatsapp-link class="top-bar-item top-bar-badge">💬 WhatsApp Support</a>
+        <a href="admin.html" class="top-bar-item" style="opacity: 0.8;">🔐 Admin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">👓</div>
+        <div class="logo-text">
+          <span class="logo-title">Eye Care <span>Optical</span></span>
+          <span class="logo-subtitle">Vision & Eyewear Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <div class="nav-dropdown">
+          <a href="products.html" class="nav-link active">Products ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html" class="dropdown-item">👓 All Eyewear Collections</a>
+            <a href="eyeglasses.html" class="dropdown-item">👓 Eyeglasses & Frames</a>
+            <a href="sunglasses.html" class="dropdown-item">🕶️ Polarized Sunglasses</a>
+            <a href="contact-lenses.html" class="dropdown-item">👁️ Contact Lenses</a>
+            <a href="computer-glasses.html" class="dropdown-item">💻 Computer Glasses</a>
+            <a href="reading-glasses.html" class="dropdown-item">📖 Reading Glasses</a>
+            <a href="kids-eyewear.html" class="dropdown-item">🧒 Kids Eyewear</a>
+            <a href="optical-lenses.html" class="dropdown-item">🔬 Prescription Lenses</a>
+          </div>
+        </div>
+        <a href="brands.html" class="nav-link">Our Brands</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="faqs.html" class="nav-link">FAQs</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-accent btn-sm"><span>Book Eye Test</span></a>
+        <button class="mobile-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon">👓</div>
+        <div class="logo-text"><span class="logo-title">Eye Care <span>Optical</span></span></div>
+      </div>
+      <button class="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="products.html" class="drawer-link active">All Products</a>
+      <a href="eyeglasses.html" class="drawer-link">Eyeglasses</a>
+      <a href="sunglasses.html" class="drawer-link">Sunglasses</a>
+      <a href="contact-lenses.html" class="drawer-link">Contact Lenses</a>
+      <a href="computer-glasses.html" class="drawer-link">Computer Glasses</a>
+      <a href="reading-glasses.html" class="drawer-link">Reading Glasses</a>
+      <a href="kids-eyewear.html" class="drawer-link">Kids Eyewear</a>
+      <a href="optical-lenses.html" class="drawer-link">Optical Lenses</a>
+      <a href="brands.html" class="drawer-link">Our Brands</a>
+      <a href="services.html" class="drawer-link">Eye Care Services</a>
+      <a href="offers.html" class="drawer-link">Offers</a>
+      <a href="contact.html" class="drawer-link">Contact Us</a>
+    </div>
+  </aside>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Our Eyewear & Lens Catalog</h1>
+      <p>Explore high-definition optical frames, sunglasses, computer glasses, and premium lenses.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span class="current">Our Products</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <div class="container" style="margin-top: 24px;">
+    <div class="info-notice-bar">
+      <span>ℹ️</span>
+      <div>
+        <strong>Store Informational Catalog:</strong> Eyewear displayed below can be tried on at our optical showroom. For exact power fitting, pupil distance verification, or custom progressive markings, please visit us or message on WhatsApp. No online payments required.
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Main Content -->
+  <section style="padding: 40px 0 80px 0;">
+    <div class="container">
+      
+      <!-- Category Pills -->
+      <div class="category-pills" id="categoryPills">
+        <button class="pill-btn active" data-category="all">All Products</button>
+        <button class="pill-btn" data-category="eyeglasses">👓 Eyeglasses</button>
+        <button class="pill-btn" data-category="sunglasses">🕶️ Sunglasses</button>
+        <button class="pill-btn" data-category="computer-glasses">💻 Computer Blue-Cut</button>
+        <button class="pill-btn" data-category="contact-lenses">👁️ Contact Lenses</button>
+        <button class="pill-btn" data-category="reading-glasses">📖 Reading Glasses</button>
+        <button class="pill-btn" data-category="kids-eyewear">🧒 Kids Eyewear</button>
+        <button class="pill-btn" data-category="optical-lenses">🔬 Optical Lenses</button>
+        <button class="pill-btn" data-category="accessories">🧴 Cleaning Kits</button>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Search by name, brand, shape..." />
+        </div>
+
+        <div class="filter-group">
+          <select id="brandFilter" class="filter-select">
+            <option value="all">All Brands</option>
+            <option value="Ray-Ban">Ray-Ban</option>
+            <option value="Oakley">Oakley</option>
+            <option value="Titan Eye+">Titan Eye+</option>
+            <option value="Carrera">Carrera</option>
+            <option value="Vogue">Vogue</option>
+            <option value="Scott">Scott</option>
+            <option value="Essilor">Essilor</option>
+            <option value="Zeiss">Zeiss</option>
+          </select>
+
+          <select id="shapeFilter" class="filter-select">
+            <option value="all">All Frame Shapes</option>
+            <option value="Square">Square</option>
+            <option value="Round">Round</option>
+            <option value="Hexagonal">Hexagonal</option>
+            <option value="Aviator">Aviator</option>
+            <option value="Cat Eye">Cat Eye</option>
+            <option value="Rectangle">Rectangle</option>
+          </select>
+
+          <span id="resultsCount" style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Showing all items</span>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productsCatalogGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Eye Care Optical Shop. Informational Catalog.</div>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <a href="admin.html">Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-widget-bar">
+    <a href="#" data-whatsapp-link class="floating-btn whatsapp-float"><span>💬 WhatsApp Enquiry</span></a>
+    <button class="back-to-top">↑</button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const products = DataStore.getProducts();
+      const grid = document.getElementById('productsCatalogGrid');
+      const searchInput = document.getElementById('searchInput');
+      const brandFilter = document.getElementById('brandFilter');
+      const shapeFilter = document.getElementById('shapeFilter');
+      const pills = document.querySelectorAll('.pill-btn');
+      const resultsCount = document.getElementById('resultsCount');
+
+      let currentCategory = 'all';
+
+      // Check if URL has ?cat= parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramCat = urlParams.get('cat');
+      if (paramCat) {
+        currentCategory = paramCat;
+        pills.forEach(p => {
+          if (p.getAttribute('data-category') === paramCat) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+
+      function filterAndRender() {
+        const query = searchInput.value.toLowerCase().trim();
+        const selectedBrand = brandFilter.value;
+        const selectedShape = shapeFilter.value;
+
+        const filtered = products.filter(p => {
+          const matchCat = currentCategory === 'all' || p.category === currentCategory;
+          const matchBrand = selectedBrand === 'all' || p.brand.toLowerCase().includes(selectedBrand.toLowerCase());
+          const matchShape = selectedShape === 'all' || (p.shape && p.shape.toLowerCase().includes(selectedShape.toLowerCase()));
+          const matchQuery = !query || 
+            p.name.toLowerCase().includes(query) || 
+            p.brand.toLowerCase().includes(query) || 
+            (p.shape && p.shape.toLowerCase().includes(query)) ||
+            (p.description && p.description.toLowerCase().includes(query));
+
+          return matchCat && matchBrand && matchShape && matchQuery;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #ffffff; border-radius: var(--radius-md); border: 1px dashed var(--border);">
+              <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
+              <h3 style="color: var(--primary); margin-bottom: 8px;">No matching eyewear found</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Try clearing your search query or selecting "All Products".</p>
+              <button class="btn btn-outline btn-sm" onclick="location.reload()">Reset Filters</button>
+            </div>
+          `;
+          resultsCount.textContent = `0 items found`;
+        } else {
+          grid.innerHTML = filtered.map(p => createProductCardHTML(p)).join('');
+          resultsCount.textContent = `Showing ${filtered.length} items`;
+        }
+      }
+
+      // Pill clicks
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentCategory = pill.getAttribute('data-category');
+          filterAndRender();
+        });
+      });
+
+      searchInput.addEventListener('input', filterAndRender);
+      brandFilter.addEventListener('change', filterAndRender);
+      shapeFilter.addEventListener('change', filterAndRender);
+
+      // Initial render
+      filterAndRender();
+    });
+  </script>
+</body>
+</html>
